@@ -2,6 +2,21 @@
 import React from "react";
 
 const Page4 = () => {
+  const email = "naitiknayak009@gmail.com"; // Replace with your email
+  const subject = encodeURIComponent("Let's Connect!");
+  const body = encodeURIComponent(
+    "Hey Naitik,\n\nI’d love to discuss something with you."
+  );
+  const whatsappNumber = "+919580520812"; // Replace with your number
+  const whatsappMessage = encodeURIComponent(
+    "Hey Naitik, I’d love to connect!"
+  );
+  const openWhatsApp = () => {
+    window.open(
+      `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`,
+      "_blank"
+    );
+  };
   return (
     <div className="flex flex-col items-center justify-center min-h-screen px-6 py-20">
       {/* Container */}
@@ -20,10 +35,18 @@ const Page4 = () => {
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-5 mt-8">
-          <button className="bg-[#242424] text-white px-8 py-3 sm:px-9 sm:py-4 font-semibold tracking-wide rounded-3xl cursor-pointer hover:bg-gray-300 hover:text-black transition-transform duration-200 hover:scale-105">
+          <button
+            onClick={() =>
+              (window.location.href = `mailto:${email}?subject=${subject}&body=${body}`)
+            }
+            className="bg-[#242424] text-white px-8 py-3 sm:px-9 sm:py-4 font-semibold tracking-wide rounded-3xl cursor-pointer hover:bg-gray-300 hover:text-black transition-transform duration-200 hover:scale-105"
+          >
             Email
           </button>
-          <button className="bg-gray-300 text-black px-8 py-3 sm:px-9 sm:py-4 font-semibold tracking-wide rounded-3xl cursor-pointer hover:bg-black hover:text-white transition-transform duration-200 hover:scale-105">
+          <button
+            onClick={openWhatsApp}
+            className="bg-gray-300 text-black px-8 py-3 sm:px-9 sm:py-4 font-semibold tracking-wide rounded-3xl cursor-pointer hover:bg-black hover:text-white transition-transform duration-200 hover:scale-105"
+          >
             WhatsApp
           </button>
         </div>
