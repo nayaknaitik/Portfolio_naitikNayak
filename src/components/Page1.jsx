@@ -4,8 +4,8 @@ import React from "react";
 
 const Page1 = () => {
   return (
-    <div className="bg-[#ebebe9] h-240 w-full rounded-b-4xl static">
-      <div className="absolute mt-10 flex ml-20">
+    <div className="bg-[#ebebe9] h-240 w-full rounded-b-4xl static sm:w-3/4 md:w-2/3 lg:w-full mx-auto">
+      <div className="absolute mt-10 flex ml-20 hidden sm:block">
         <ul className="flex gap-5 items-center">
           <li className="font-light text-sm tracking-wider">
             naitiknayak009@gmail.com
@@ -39,7 +39,7 @@ const Page1 = () => {
         <h1 className="text-4xl tracking-wide font-light mb-10">
           Naitik Nayak 👋
         </h1>
-        <h1 className="text-5xl font-bold text-center tracking-wide">
+        <h1 className=" font-bold text-center tracking-wide sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl">
           Building Websites <br /> and mordern UIs .🚀.
         </h1>
         <button className="bg-[#242424] text-white px-9 py-4 mt-6 font-semibold tracking-wide rounded-4xl cursor-pointer hover:bg-white hover:text-black transition-ease-in-out duration-200 hover:scale-110">
