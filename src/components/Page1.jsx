@@ -12,6 +12,9 @@ const Page1 = () => {
   const gotToG = () => {
     window.location.href = "https://github.com/nayaknaitik ";
   };
+  const gotToLinkedIn = () => {
+    window.location.href = "https://www.linkedin.com/in/naitiknayak/";
+  };
 
   return (
     <div className="bg-[#ebebe9] min-h-screen w-full rounded-b-4xl static flex flex-col items-center px-5 sm:px-10 mx-auto">
@@ -39,6 +42,9 @@ const Page1 = () => {
           </li>
           <li className="cursor-pointer tracking-wide hover:scale-110 transition duration-200" onClick={gotToG}>
             GitHub
+          </li>
+          <li className="cursor-pointer tracking-wide hover:scale-110 transition duration-200" onClick={gotToLinkedIn}>
+            LinkedIn
           </li>
         </ul>
       </div>
