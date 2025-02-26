@@ -1,16 +1,40 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const Page3 = () => {
+  const refCard = useRef(null);
+  useGSAP(() => {
+    gsap.from(refCard.current, {
+      scrollTrigger: {
+        trigger: refCard.current,
+        start: "top 70%",
+        end: "bottom 50%",
+        markers: false,
+        scrub: true,
+        toggleActions: "restart none none none",
+      },
+      duration: 2,
+      x: -100,
+      opacity: 0,
+      stagger: 0.4,
+
+    })
+  }, []);
+  
      return (
        <div className="flex flex-col items-center justify-center w-full bg-[#ebebe9] rounded-t-4xl rounded-b-4xl px-6 py-20">
          {/* Heading */}
          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center tracking-wide mt-10 opacity-80 leading-snug">
-           Web Developer | UI/UX Designer | <br className="hidden sm:block" /> Building modern & responsive experiences 🚀
+           Web Developer | UI/UX Designer | <br className="hidden sm:block" /> Building Modern & Responsive experiences 🚀
          </h1>
    
          {/* Services Grid */}
-         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mt-16 w-full max-w-5xl">
+         <div ref={refCard} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mt-16 w-full max-w-5xl">
            {/* Card 1 */}
            <div className="bg-white p-6 rounded-lg shadow-lg text-center transition-transform duration-200 hover:scale-105">
              <img

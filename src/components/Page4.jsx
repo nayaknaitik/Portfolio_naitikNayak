@@ -1,7 +1,31 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
+// import { useRef } from "react";
+// import { useGSAP } from "@gsap/react";
+// import gsap from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// gsap.registerPlugin(ScrollTrigger);
 
 const Page4 = () => {
+  // const refl = useRef(null);
+  // useGSAP(() => {
+  //   gsap.from(refl.current, {
+  //     duration: 1,
+  //     y: -100,
+  //     opacity: 0,
+  //     ease: "power2.inOut",
+  //     scrollTrigger: {
+  //       trigger: refl.current,
+  //       start: "top 20%",
+  //       end: "bottom 45%",
+  //       markers: true,
+  //       scrub: true,
+  //     },
+  //   });
+  // }, []);
+
+
   const email = "naitiknayak009@gmail.com"; // Replace with your email
   const subject = encodeURIComponent("Let's Connect!");
   const body = encodeURIComponent(
