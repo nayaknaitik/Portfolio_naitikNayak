@@ -1,7 +1,30 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const Page2 = () => {
+  const listRef = useRef(null);
+  useGSAP(() => {
+    gsap.from(listRef.current.children, {
+      scrollTrigger: {
+        trigger: listRef.current,
+        start: "top 70%",
+        end: "bottom 40%",
+        markers: false,
+        scrub: true,
+        toggleActions: "restart none none none",
+      },
+      duration: 2,
+      y: -100,
+      opacity: 0,
+      stagger: 0.4,
+
+    })
+  }, []);
   return (
     <>
       {/* Title */}
@@ -9,7 +32,10 @@ const Page2 = () => {
       <div className="w-40 sm:w-60 bg-gray-300 h-2 mx-auto rounded-full mt-5"></div> */}
 
       {/* Skills Grid */}
-      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 mt-10 px-6 h-40 items-center justify-center">
+      <div
+        ref={listRef}
+        className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 mt-10 px-6 h-40 items-center justify-center"
+      >
         <img
           src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9Lnm0K-Cbz4eTj44xNdkW0c1dk4Jl2Xe1qw&s"
           alt="HTML"
@@ -46,4 +72,3 @@ const Page2 = () => {
 };
 
 export default Page2;
-
