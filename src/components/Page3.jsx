@@ -19,7 +19,7 @@ const Page3 = () => {
         toggleActions: "restart none none none",
       },
       duration: 2,
-      x: -100,
+      y: -100,
       opacity: 0,
       stagger: 0.4,
 
