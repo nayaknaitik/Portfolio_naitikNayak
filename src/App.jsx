@@ -8,11 +8,13 @@ import Page2 from './components/Page2';
 import Page3 from './components/Page3';
 import Page4 from './components/Page4';
 import Footer from './components/Footer';
+import Cursor from './components/Cursor';
 
 function App() {
 
   return (
     <>
+    <Cursor />
       <Page1/>
       <Page2/>
       <Page3 />

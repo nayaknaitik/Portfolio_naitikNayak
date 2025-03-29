@@ -25,7 +25,6 @@ const Page4 = () => {
   //   });
   // }, []);
 
-
   const email = "naitiknayak009@gmail.com"; // Replace with your email
   const subject = encodeURIComponent("Let's Connect!");
   const body = encodeURIComponent(
